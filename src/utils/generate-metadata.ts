@@ -9,8 +9,8 @@ interface Props {
 }
 
 const siteUrl = process.env.NEXT_PUBLIC_BASE_URL as string
-const siteName = 'La Fabrica LTD'
-const descriptionDefault = ''
+const siteName = 'Started kit nextjs 15 template'
+const descriptionDefault = 'Started kit nextjs 15 template'
 
 export const generateMetadata = ({
 	title,
@@ -19,7 +19,7 @@ export const generateMetadata = ({
 	canonicalUrl,
 }: Props): Metadata => {
 	return {
-		title: `${title} | La Fabrica LTD`,
+		title: `${title} | ${siteName}`,
 		description: description ?? descriptionDefault,
 		metadataBase: new URL(siteUrl),
 		alternates: {
@@ -35,8 +35,8 @@ export const generateMetadata = ({
 		},
 		openGraph: {
 			title: {
-				template: '%s | La Fabrica LTD',
-				default: 'La Fabrica LTD',
+				template: `%s | ${siteName}`,
+				default: siteName,
 			},
 			description: description ?? descriptionDefault,
 			url: `${siteUrl}/${canonicalUrl}`,
@@ -51,7 +51,7 @@ export const generateMetadata = ({
 		},
 		twitter: {
 			card: 'summary',
-			title: `${title} | La Fabrica LTD`,
+			title: `${title} | ${siteName}`,
 			description: description ?? descriptionDefault,
 			images: [ogImg ?? '/og-image.png'],
 		},
