@@ -19,8 +19,8 @@ const Providers: FC<Props> = ({ children }) => {
 				options={{ showSpinner: false }}
 				shallowRouting
 			/>
-				<Toaster />
-				<HeroUIProvider navigate={router.push}>{children}</HeroUIProvider>
+			<Toaster />
+			<HeroUIProvider navigate={router.push}>{children}</HeroUIProvider>
 		</ThemeProvider>
 	)
 }
