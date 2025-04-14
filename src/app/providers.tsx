@@ -1,7 +1,8 @@
 'use client'
+import { ProgressProvider } from '@bprogress/next/app'
 import { HeroUIProvider } from '@heroui/react'
-import { AppProgressBar as ProgressBar, useRouter } from 'next-nprogress-bar'
 import { ThemeProvider } from 'next-themes'
+import { useRouter } from 'next/navigation'
 import type { FC, ReactNode } from 'react'
 import { Toaster } from 'sonner'
 
@@ -12,18 +13,15 @@ interface Props {
 const Providers: FC<Props> = ({ children }) => {
 	const router = useRouter()
 	return (
-		<>
-			<ProgressBar
+		<ThemeProvider>
+			<ProgressProvider
+				height="4px"
 				options={{ showSpinner: false }}
-				color="#000"
 				shallowRouting
 			/>
-
-			<Toaster />
-			<HeroUIProvider navigate={router.push}>
-				<ThemeProvider>{children}</ThemeProvider>
-			</HeroUIProvider>
-		</>
+				<Toaster />
+				<HeroUIProvider navigate={router.push}>{children}</HeroUIProvider>
+		</ThemeProvider>
 	)
 }
 

@@ -20,7 +20,7 @@ const ThemeToggle = () => {
 					<Button
 						isIconOnly
 						variant="light"
-						onClick={() => setTheme('light')}
+						onPress={() => setTheme('light')}
 						className="dark:data-[hover=true]:bg-default/5"
 					>
 						<Sun01Icon />
@@ -29,7 +29,7 @@ const ThemeToggle = () => {
 					<Button
 						isIconOnly
 						variant="light"
-						onClick={() => setTheme('dark')}
+						onPress={() => setTheme('dark')}
 						className="text-gray-800 data-[hover=true]:bg-default/5"
 					>
 						<Moon02Icon />
