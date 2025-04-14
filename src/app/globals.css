@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Change the color of the progress bar when it is in dark mode */
+html.dark {
+	--bprogress-color: #fff;
+}
 body {
 	font-family: "Manrope Variable", sans-serif;
 }

@@ -13,11 +13,12 @@ interface Props {
 const Providers: FC<Props> = ({ children }) => {
 	const router = useRouter()
 	return (
-		<ThemeProvider>
+		<ThemeProvider attribute="class" defaultTheme="dark">
 			<ProgressProvider
 				height="4px"
 				options={{ showSpinner: false }}
 				shallowRouting
+				color="#000"
 			/>
 			<Toaster />
 			<HeroUIProvider navigate={router.push}>{children}</HeroUIProvider>
