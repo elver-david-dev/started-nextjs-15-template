@@ -1,8 +1,8 @@
 'use client'
 import { ProgressProvider } from '@bprogress/next/app'
 import { HeroUIProvider } from '@heroui/react'
-import { ThemeProvider } from 'next-themes'
 import { useRouter } from 'next/navigation'
+import { ThemeProvider } from 'next-themes'
 import type { FC, ReactNode } from 'react'
 import { Toaster } from 'sonner'
 

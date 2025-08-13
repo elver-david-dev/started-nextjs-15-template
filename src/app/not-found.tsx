@@ -1,12 +1,13 @@
 'use client'
 import { Button } from '@heroui/react'
 import { Home01Icon } from 'hugeicons-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function NotFound() {
 	return (
 		<section className="flex flex-col items-center h-screen mt-10">
-			<img
+			<Image
 				src="/404-not-found.webp"
 				alt="404 Not Found"
 				width={250}
